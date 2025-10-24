@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Reservas | CondoApp</title>
+  <link rel="stylesheet" href="./css/admin-reservas.css">
+</head>
+<body>
+  <header class="header">
+    <h1>CondoApp</h1>
+    <span class="user-role">Administrador</span>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <h2>Reservas</h2>
+      <p class="subtitle">Gerenciar reservas de áreas comuns</p>
+
+      <div class="card">
+        <h3>Áreas Disponíveis</h3>
+        <p class="small">Espaços para reserva</p>
+        <div class="areas-list">
+          <div class="area-item">
+            <div>
+              <span class="icon">📍</span> Churrasqueira 1
+              <p class="people">15 pessoas</p>
+            </div>
+            <span class="status status-green">Disponível</span>
+          </div>
+
+          <div class="area-item">
+            <div>
+              <span class="icon">📍</span> Churrasqueira 2
+              <p class="people">15 pessoas</p>
+            </div>
+            <span class="status status-green">Disponível</span>
+          </div>
+
+          <div class="area-item">
+            <div>
+              <span class="icon">📍</span> Salão de Festas
+              <p class="people">50 pessoas</p>
+            </div>
+            <span class="status status-green">Disponível</span>
+          </div>
+
+          <div class="area-item">
+            <div>
+              <span class="icon">📍</span> Quadra Esportiva
+              <p class="people">20 pessoas</p>
+            </div>
+            <span class="status status-green">Disponível</span>
+          </div>
+
+          <div class="area-item">
+            <div>
+              <span class="icon">📍</span> Piscina
+              <p class="people">30 pessoas</p>
+            </div>
+            <span class="status status-green">Disponível</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Próximas Reservas</h3>
+        <p class="small">Reservas agendadas</p>
+
+        <div class="reserva-item">
+          <div>
+            <span class="icon">📍</span> Churrasqueira 1
+            <p class="details">15/10/2025 · 14:00 <br>Apto 301</p>
+          </div>
+          <span class="status status-green">Confirmada</span>
+        </div>
+
+        <div class="reserva-item">
+          <div>
+            <span class="icon">📍</span> Salão de Festas
+            <p class="details">20/10/2025 · 19:00 <br>Apto 205</p>
+          </div>
+          <span class="status status-green">Confirmada</span>
+        </div>
+
+        <div class="reserva-item">
+          <div>
+            <span class="icon">📍</span> Quadra Esportiva
+            <p class="details">18/10/2025 · 16:00 <br>Apto 102</p>
+          </div>
+          <span class="status status-yellow">Pendente</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Calendário de Reservas</h3>
+        <p class="small">Visualizar disponibilidade</p>
+
+        <div class="calendar">
+          <div class="calendar-header">
+            <button>&lt;</button>
+            <span>Outubro 2025</span>
+            <button>&gt;</button>
+          </div>
+
+          <div class="calendar-grid">
+            <span>Dom</span><span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span>
+            <span></span><span></span><span></span><span>1</span><span>2</span><span>3</span><span>4</span>
+            <span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span>
+            <span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span>
+            <span>19</span><span>20</span><span>21</span><span>22</span><span>23</span>
+            <span class="selected">24</span>
+            <span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span><span>31</span>
+          </div>
+
+          <div class="calendar-reservas">
+            <p>Reservas para 24/10/2025:</p>
+            <div class="event">14:00 – Churrasqueira 1 (Apto 301)</div>
+            <div class="event">16:00 – Quadra Esportiva (Apto 102)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <nav class="bottom-nav">
+    <a href="#" class="nav-item"><span>🏠</span><p>Dashboard</p></a>
+    <a href="#" class="nav-item"><span>💰</span><p>Finanças</p></a>
+    <a href="#" class="nav-item active"><span>📅</span><p>Reservas</p></a>
+    <a href="#" class="nav-item"><span>📄</span><p>Documentos</p></a>
+    <a href="#" class="nav-item"><span>🛠️</span><p>Manutenção</p></a>
+    <a href="#" class="nav-item"><span>💬</span><p>Mensagens</p></a>
+    <a href="#" class="nav-item"><span>⚙️</span><p>Configurações</p></a>
+  </nav>
+</body>
+</html>

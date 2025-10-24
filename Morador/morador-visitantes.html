@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Morador Visitantes</title>
+  <link rel="stylesheet" href="./css/morador-visitantes.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="header">
+    <div>
+      <h1>CondoApp</h1>
+      <span class="role">Morador</span>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="card status-summary">
+      <div class="status-box">
+        <span class="icon">👤</span>
+        <div>
+          <p class="number">1</p>
+          <p class="label">Visitantes Ativos</p>
+        </div>
+      </div>
+      <div class="status-box">
+        <span class="icon">⏰</span>
+        <div>
+          <p class="number">2</p>
+          <p class="label">Visitas Agendadas</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>Visitas Agendadas</h3>
+      <p class="subtitle">Próximos visitantes</p>
+
+      <div class="visitante agendado">
+        <div class="info">
+          <strong>Carlos Mendes</strong>
+          <span>RG 32.165.498-7</span>
+          <span>14/10/2025 às 15:00</span>
+        </div>
+        <div class="status agendado-label">Agendado</div>
+      </div>
+
+      <div class="visitante agendado">
+        <div class="info">
+          <strong>Luciana Ferreira</strong>
+          <span>RG 65.498.732-1</span>
+          <span>15/10/2025 às 11:30</span>
+        </div>
+        <div class="status agendado-label">Agendado</div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>Histórico de Visitantes</h3>
+      <p class="subtitle">Visitantes recentes</p>
+
+      <div class="visitante ativo">
+        <div class="info">
+          <strong>João Silva</strong>
+          <span>RG 12.345.678-9</span>
+          <span>13/10/2025 às 14:30</span>
+        </div>
+        <div class="status ativo-label">Ativo</div>
+      </div>
+
+      <div class="visitante concluido">
+        <div class="info">
+          <strong>Maria Santos</strong>
+          <span>RG 98.765.432-1</span>
+          <span>13/10/2025 às 10:15</span>
+        </div>
+        <div class="status concluido-label">Concluído</div>
+      </div>
+
+      <div class="visitante concluido">
+        <div class="info">
+          <strong>Pedro Costa</strong>
+          <span>RG 45.678.912-3</span>
+          <span>12/10/2025 às 16:45</span>
+        </div>
+        <div class="status concluido-label">Concluído</div>
+      </div>
+
+      <div class="visitante concluido">
+        <div class="info">
+          <strong>Ana Oliveira</strong>
+          <span>RG 78.912.345-6</span>
+          <span>12/10/2025 às 09:00</span>
+        </div>
+        <div class="status concluido-label">Concluído</div>
+      </div>
+    </section>
+
+    <footer class="dica">
+      <strong>Dica:</strong> Sempre registre seus visitantes com antecedência para facilitar o acesso. A portaria será notificada automaticamente.
+    </footer>
+  </main>
+
+  <nav class="bottom-nav">
+    <a href="#" class="active">👥<span>Visitantes</span></a>
+    <a href="#">💬<span>Mensagens</span></a>
+    <a href="#">⚙️<span>Configurações</span></a>
+  </nav>
+</body>
+</html>

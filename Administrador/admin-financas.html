@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finanças</title>
+  <link rel="stylesheet" href="./css/admin-financas.css" />
+</head>
+<body>
+  <main class="main">
+    <section class="header-section">
+      <h3>Finanças</h3>
+      <p class="subtitle">Gestão financeira do condomínio</p>
+    </section>
+
+    <section class="cards">
+      <div class="card positive">
+        <p class="title">R$ 45.680,00</p>
+        <p class="desc">Receitas do Mês</p>
+        <span class="percent up">+12%</span>
+      </div>
+      <div class="card negative">
+        <p class="title">R$ 28.340,00</p>
+        <p class="desc">Despesas do Mês</p>
+        <span class="percent down">-5%</span>
+      </div>
+      <div class="card neutral">
+        <p class="title">R$ 17.340,00</p>
+        <p class="desc">Saldo do Mês</p>
+        <span class="icon">💲</span>
+      </div>
+      <div class="card neutral">
+        <p class="title">R$ 3.250,00</p>
+        <p class="desc">Valores Pendentes</p>
+        <span class="icon">📄</span>
+      </div>
+    </section>
+
+    <section class="chart">
+      <h4>Receitas vs Despesas</h4>
+      <p class="subtitle">Últimos 5 meses</p>
+      <div class="chart-box bars">
+        <div class="bar-group">
+          <div class="bar red" style="height: 60%;"></div>
+          <div class="bar blue" style="height: 80%;"></div>
+          <span>Jun</span>
+        </div>
+        <div class="bar-group">
+          <div class="bar red" style="height: 50%;"></div>
+          <div class="bar blue" style="height: 90%;"></div>
+          <span>Jul</span>
+        </div>
+        <div class="bar-group">
+          <div class="bar red" style="height: 55%;"></div>
+          <div class="bar blue" style="height: 75%;"></div>
+          <span>Ago</span>
+        </div>
+        <div class="bar-group">
+          <div class="bar red" style="height: 45%;"></div>
+          <div class="bar blue" style="height: 70%;"></div>
+          <span>Set</span>
+        </div>
+        <div class="bar-group">
+          <div class="bar red" style="height: 50%;"></div>
+          <div class="bar blue" style="height: 85%;"></div>
+          <span>Out</span>
+        </div>
+      </div>
+      <div class="legend">
+        <div><span class="color red"></span> Despesas</div>
+        <div><span class="color blue"></span> Receitas</div>
+      </div>
+    </section>
+
+    <section class="chart">
+      <h4>Tendência de Receitas</h4>
+      <p class="subtitle">Evolução mensal</p>
+      <div class="chart-box line">
+        <div class="line-chart">
+          <span class="point" style="left:5%; bottom:60%;"></span>
+          <span class="point" style="left:25%; bottom:58%;"></span>
+          <span class="point" style="left:45%; bottom:62%;"></span>
+          <span class="point" style="left:65%; bottom:64%;"></span>
+          <span class="point" style="left:85%; bottom:63%;"></span>
+          <svg class="line-path" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <polyline points="5,40 25,42 45,38 65,36 85,37" fill="none" stroke="#2a5bd7" stroke-width="2" />
+          </svg>
+        </div>
+        <div class="months">
+          <span>Jun</span><span>Jul</span><span>Ago</span><span>Set</span><span>Out</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="payments">
+      <h4>Histórico de Pagamentos</h4>
+      <p class="subtitle">Pagamentos recentes dos moradores</p>
+
+      <div class="payment">
+        <div>
+          <p><strong>Apto 301</strong></p>
+          <span class="date">05/10/2025</span>
+        </div>
+        <div class="amount">
+          <span>R$ 650,00</span>
+          <span class="status pago">Pago</span>
+        </div>
+      </div>
+
+      <div class="payment">
+        <div>
+          <p><strong>Apto 205</strong></p>
+          <span class="date">03/10/2025</span>
+        </div>
+        <div class="amount">
+          <span>R$ 650,00</span>
+          <span class="status pago">Pago</span>
+        </div>
+      </div>
+
+      <div class="payment">
+        <div>
+          <p><strong>Apto 102</strong></p>
+          <span class="date">01/10/2025</span>
+        </div>
+        <div class="amount">
+          <span>R$ 650,00</span>
+          <span class="status pago">Pago</span>
+        </div>
+      </div>
+
+      <div class="payment">
+        <div>
+          <p><strong>Apto 408</strong></p>
+          <span class="date">Vencido</span>
+        </div>
+        <div class="amount">
+          <span>R$ 650,00</span>
+          <span class="status vencido">Vencido</span>
+        </div>
+      </div>
+
+      <div class="payment">
+        <div>
+          <p><strong>Apto 501</strong></p>
+          <span class="date">10/10/2025</span>
+        </div>
+        <div class="amount">
+          <span>R$ 650,00</span>
+          <span class="status pendente">Pendente</span>
+        </div>
+      </div>
+    </section>
+
+    <button class="btn">📄 Emitir Boletos</button>
+  </main>
+
+  <nav class="bottom-nav">
+    <a href="#">🏠 Dashboard</a>
+    <a href="#" class="active">💰 Finanças</a>
+    <a href="#">📅 Reservas</a>
+    <a href="#">📄 Documentos</a>
+    <a href="#">🛠️ Manutenção</a>
+    <a href="#">💬 Mensagens</a>
+    <a href="#">⚙️ Configurações</a>
+  </nav>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Morador</title>
+  <link rel="stylesheet" href="./css/morador-dashboard.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="header">
+    <div>
+      <h1>CondoApp</h1>
+      <span class="role">Morador</span>
+    </div>
+    <button class="logout">⤴</button>
+  </header>
+
+  <main class="main-content">
+    <section class="user-info">
+      <p class="welcome">Olá, <strong>Morador</strong></p>
+      <p class="apto">Apto 301 - Bloco A</p>
+    </section>
+
+    <!-- Minhas Contas -->
+    <section class="card">
+      <h3>Minhas Contas</h3>
+      <p class="subtitle">Resumo financeiro do mês</p>
+
+      <div class="bill">
+        <div class="bill-info">
+          <span class="icon">💧</span>
+          <div>
+            <p>Água</p>
+            <small>R$ 85,40</small>
+          </div>
+        </div>
+        <span class="status pago">Pago</span>
+      </div>
+
+      <div class="bill">
+        <div class="bill-info">
+          <span class="icon">⚡</span>
+          <div>
+            <p>Luz</p>
+            <small>R$ 142,30</small>
+          </div>
+        </div>
+        <span class="status pendente">Pendente</span>
+      </div>
+
+      <div class="bill">
+        <div class="bill-info">
+          <span class="icon">🔥</span>
+          <div>
+            <p>Gás</p>
+            <small>R$ 65,00</small>
+          </div>
+        </div>
+        <span class="status pago">Pago</span>
+      </div>
+
+      <div class="bill">
+        <div class="bill-info">
+          <span class="icon">🏠</span>
+          <div>
+            <p>Condomínio</p>
+            <small>R$ 650,00</small>
+          </div>
+        </div>
+        <span class="status pendente">Pendente</span>
+      </div>
+
+      <div class="total">
+        <span>Total Pendente</span>
+        <strong>R$ 792,30</strong>
+      </div>
+    </section>
+
+    <!-- Minhas Reservas -->
+    <section class="card">
+      <h3>Minhas Reservas</h3>
+      <p class="subtitle">Próximas reservas de áreas comuns</p>
+
+      <div class="item">
+        <span class="icon">📅</span>
+        <div>
+          <p>Churrasqueira 1</p>
+          <small>15/10/2025 às 14:00</small>
+        </div>
+      </div>
+
+      <div class="item">
+        <span class="icon">📅</span>
+        <div>
+          <p>Salão de Festas</p>
+          <small>20/10/2025 às 19:00</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- Avisos -->
+    <section class="card">
+      <h3>Avisos</h3>
+      <p class="subtitle">Comunicados do condomínio</p>
+
+      <div class="item">
+        <span class="icon">ℹ️</span>
+        <div>
+          <p>Manutenção do elevador na próxima semana</p>
+          <small>12/10/2025</small>
+        </div>
+      </div>
+
+      <div class="item">
+        <span class="icon">ℹ️</span>
+        <div>
+          <p>Nova votação sobre reformas disponível</p>
+          <small>10/10/2025</small>
+        </div>
+      </div>
+
+      <div class="item">
+        <span class="icon">ℹ️</span>
+        <div>
+          <p>Assembleia geral marcada para 25/10</p>
+          <small>08/10/2025</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mensagens -->
+    <section class="card">
+      <h3>Mensagens</h3>
+      <p class="subtitle">Comunicação com a administração</p>
+
+      <div class="item">
+        <span class="icon">💬</span>
+        <div>
+          <p>Administração <span class="badge">Novo</span></p>
+          <small>Lembrete: pagamento do condomínio</small>
+        </div>
+      </div>
+
+      <div class="item">
+        <span class="icon">💬</span>
+        <div>
+          <p>Administração</p>
+          <small>Horários de mudança atualizados</small>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Barra de Navegação Inferior -->
+  <nav class="bottom-nav">
+    <a href="#" class="active">🏠<span>Dashboard</span></a>
+    <a href="#">💰<span>Finanças</span></a>
+    <a href="#">📅<span>Reservas</span></a>
+    <a href="#">📄<span>Documentos</span></a>
+    <a href="#">👥<span>Visitantes</span></a>
+    <a href="#">💬<span>Mensagens</span></a>
+    <a href="#">⚙️<span>Configurações</span></a>
+  </nav>
+
+</body>
+</html>

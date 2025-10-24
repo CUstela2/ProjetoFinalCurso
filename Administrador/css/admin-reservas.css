@@ -1,0 +1,179 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5f7fa;
+  margin: 0;
+  color: #333;
+}
+
+.header {
+  background: #fff;
+  padding: 15px 20px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  color: #2563eb;
+  font-size: 18px;
+}
+
+.user-role {
+  color: #777;
+  font-size: 13px;
+}
+
+.container {
+  padding: 20px;
+}
+
+.section h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #1f2937;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 15px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.small {
+  color: #777;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.area-item, .reserva-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.area-item:last-child, .reserva-item:last-child {
+  border-bottom: none;
+}
+
+.icon {
+  margin-right: 6px;
+}
+
+.people, .details {
+  color: #666;
+  font-size: 13px;
+  margin: 2px 0 0 22px;
+}
+
+.status {
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 3px 8px;
+}
+
+.status-green {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-yellow {
+  background: #fef9c3;
+  color: #92400e;
+}
+
+.calendar {
+  margin-top: 10px;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+}
+
+.calendar-header button {
+  border: none;
+  background: #e5e7eb;
+  border-radius: 6px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.calendar-grid span {
+  padding: 5px 0;
+  font-size: 13px;
+}
+
+.selected {
+  background: #2563eb;
+  color: #fff;
+  border-radius: 50%;
+}
+
+.calendar-reservas {
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.event {
+  background: #eff6ff;
+  border-left: 3px solid #2563eb;
+  padding: 5px 8px;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 0;
+}
+
+.nav-item {
+  text-align: center;
+  color: #6b7280;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.nav-item span {
+  font-size: 18px;
+  display: block;
+}
+
+.nav-item.active {
+  color: #2563eb;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CondoApp - Documentos</title>
+  <link rel="stylesheet" href="./css/admin-documentos.css">
+</head>
+<body>
+  <header>
+    <h1>CondoApp</h1>
+    <span class="admin">Administrador</span>
+    <button class="logout">⤴</button>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Documentos e Votações</h2>
+      <p>Acesse documentos oficiais e participe de votações</p>
+    </section>
+
+    <section class="votacoes-ativas card">
+      <h3>Votações Ativas</h3>
+      <p class="sub">Participe das decisões do condomínio</p>
+
+      <div class="votacao">
+        <div class="info">
+          <h4>📄 Reforma da Piscina</h4>
+          <p>Aprovação do projeto de reforma e modernização da área da piscina</p>
+          <p class="data">🗓️ Termina em 20/10/2025</p>
+          <div class="progress">
+            <div class="bar" style="width: 56%;"></div>
+          </div>
+          <p class="status">Participação: 45 de 80 votos</p>
+          <button class="btn-azul">Votar Agora</button>
+        </div>
+      </div>
+
+      <div class="votacao votado">
+        <div class="info">
+          <h4>📷 Instalação de Câmeras de Segurança <span class="tag-verde">Votado</span></h4>
+          <p>Instalação de sistema de câmeras nas áreas comuns</p>
+          <p class="data">🗓️ Termina em 25/10/2025</p>
+          <div class="progress">
+            <div class="bar" style="width: 65%;"></div>
+          </div>
+          <p class="status">Participação: 52 de 80 votos</p>
+
+          <div class="resultado">
+            <p>Seu voto: <strong>Aprovar</strong></p>
+            <ul>
+              <li>Aprovar — 42 (81%)</li>
+              <li>Rejeitar — 6 (12%)</li>
+              <li>Abstenção — 4 (8%)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="documentos card">
+      <h3>Documentos Oficiais</h3>
+      <p class="sub">Acesse a documentação do condomínio</p>
+
+      <div class="arquivo">📘 Convenção do Condomínio <span>15/03/2025 • 2.4 MB</span> ⬇️</div>
+      <div class="arquivo">📘 Regimento Interno <span>10/03/2025 • 1.8 MB</span> ⬇️</div>
+      <div class="arquivo">📘 Ata da Última Assembleia <span>28/09/2025 • 850 KB</span> ⬇️</div>
+      <div class="arquivo">📘 Orçamento Anual 2025 <span>05/01/2025 • 1.2 MB</span> ⬇️</div>
+      <div class="arquivo">📘 Normas de Uso das Áreas Comuns <span>20/02/2025 • 650 KB</span> ⬇️</div>
+    </section>
+
+    <section class="votacoes-encerradas card">
+      <h3>Votações Encerradas</h3>
+      <p class="sub">Resultados de votações anteriores</p>
+
+      <div class="votacao">
+        <h4>🔧 Mudança de Síndico <span class="tag-verde">Aprovado</span></h4>
+        <p>Encerrada em 05/10/2025</p>
+        <p>68 votos a favor, 12 contra</p>
+      </div>
+
+      <div class="votacao">
+        <h4>💰 Aumento da Taxa Condominial <span class="tag-vermelha">Rejeitado</span></h4>
+        <p>Encerrada em 28/09/2025</p>
+        <p>25 votos a favor, 55 contra</p>
+      </div>
+    </section>
+  </main>
+
+  <nav class="bottom-nav">
+    <a href="#" class="item"><span>🏠</span><p>Dashboard</p></a>
+    <a href="#" class="item"><span>💲</span><p>Finanças</p></a>
+    <a href="#" class="item"><span>📅</span><p>Reservas</p></a>
+    <a href="#" class="item ativo"><span>📁</span><p>Documentos</p></a>
+    <a href="#" class="item"><span>🛠️</span><p>Manutenção</p></a>
+    <a href="#" class="item"><span>💬</span><p>Mensagens</p></a>
+    <a href="#" class="item"><span>⚙️</span><p>Configurações</p></a>
+  </nav>
+</body>
+</html>

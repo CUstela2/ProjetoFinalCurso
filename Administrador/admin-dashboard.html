@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="./css/admin-dashboard.css" />
+</head>
+<body>
+  <header class="header">
+    <div>
+      <h2>CondoApp</h2>
+      <p class="role">Administrador</p>
+    </div>
+    <button class="logout-btn">⤴</button>
+  </header>
+
+  <main class="main">
+    <section class="welcome">
+      <h3>Bem-vindo, Administrador</h3>
+      <p class="subtitle">Visão geral do condomínio</p>
+    </section>
+
+    <section class="cards">
+      <div class="card positive">
+        <p class="title">R$ 45.680,00</p>
+        <p class="desc">Receitas do Mês</p>
+        <span class="percent up">+12%</span>
+      </div>
+      <div class="card negative">
+        <p class="title">R$ 28.340,00</p>
+        <p class="desc">Despesas do Mês</p>
+        <span class="percent down">-5%</span>
+      </div>
+      <div class="card">
+        <p class="title">8</p>
+        <p class="desc">Reservas Hoje</p>
+        <span class="info">3 pendentes</span>
+      </div>
+      <div class="card">
+        <p class="title">5</p>
+        <p class="desc">Manutenções Pendentes</p>
+        <span class="info">2 urgentes</span>
+      </div>
+    </section>
+
+    <section class="notifications">
+      <h4>Notificações Importantes</h4>
+      <div class="note warning">⚠️ Reunião de condomínio em 3 dias</div>
+      <div class="note danger">❗ Pagamento do elevador vence amanhã</div>
+      <div class="note info">🔔 Nova votação disponível</div>
+    </section>
+
+    <section class="messages">
+      <h4>Mensagens Recentes</h4>
+      <p class="subtitle">Comunicações dos moradores</p>
+      <div class="message new">
+        <p><strong>Apto 301</strong> <span class="badge">Novo</span></p>
+        <p class="text">Problema no interfone</p>
+        <span class="time">10 min atrás</span>
+      </div>
+      <div class="message new">
+        <p><strong>Apto 205</strong> <span class="badge">Novo</span></p>
+        <p class="text">Solicitação de reserva</p>
+        <span class="time">1h atrás</span>
+      </div>
+      <div class="message">
+        <p><strong>Apto 102</strong></p>
+        <p class="text">Consulta sobre taxa</p>
+        <span class="time">2h atrás</span>
+      </div>
+    </section>
+  </main>
+
+  <nav class="bottom-nav">
+    <a href="#" class="active">🏠 Dashboard</a>
+    <a href="#">💰 Finanças</a>
+    <a href="#">📅 Reservas</a>
+    <a href="#">📄 Documentos</a>
+    <a href="#">🛠️ Manutenção</a>
+    <a href="#">💬 Mensagens</a>
+    <a href="#">⚙️ Configurações</a>
+  </nav>
+</body>
+</html>

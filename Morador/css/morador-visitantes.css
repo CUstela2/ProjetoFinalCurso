@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: #f6f9ff;
+  color: #222;
+  padding-bottom: 80px;
+}
+
+/* ====== HEADER ====== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #fff;
+  border-bottom: 1px solid #e6e9f0;
+}
+
+.header h1 {
+  color: #2563eb;
+  font-size: 1rem;
+}
+
+.header .role {
+  display: block;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* ====== MAIN CONTENT ====== */
+.main-content {
+  padding: 15px 20px;
+}
+
+/* ====== STATUS SUMMARY ====== */
+.status-summary {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.08);
+  justify-content: center;
+}
+
+.status-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 120px;
+}
+
+.status-box .icon {
+  font-size: 1.6rem;
+}
+
+.status-box .number {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #2563eb;
+  line-height: 1;
+}
+
+.status-box .label {
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 4px;
+}
+
+/* ====== CARDS ====== */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 0.85rem;
+  margin-bottom: 15px;
+}
+
+/* ====== VISITANTES ====== */
+.visitante {
+  display: flex;
+  justify-content: space-between;
+  background: #f0f4ff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: inset 0 0 4px rgba(0,0,0,0.05);
+  align-items: center;
+}
+
+.visitante .info strong {
+  display: block;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #2563eb;
+}
+
+.visitante .info span {
+  display: block;
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 3px;
+}
+
+.status {
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 5px 12px;
+  border-radius: 16px;
+  min-width: 80px;
+  text-align: center;
+  user-select: none;
+}
+
+.agendado-label {
+  background: #fff8dc;
+  color: #b68a00;
+}
+
+.ativo-label {
+  background: #e9f9ef;
+  color: #1b9a52;
+}
+
+.concluido-label {
+  background: #e2e3e5;
+  color: #6c757d;
+}
+
+/* ====== FOOTER DICA ====== */
+.dica {
+  background: #e7f1ff;
+  color: #004085;
+  font-size: 0.85rem;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 60px;
+  border: 1px solid #b8daff;
+}
+
+/* ====== BOTTOM NAV ====== */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #e6e9f0;
+  padding: 8px 0;
+  box-shadow: 0 -1px 8px rgba(0,0,0,0.1);
+}
+
+.bottom-nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #555;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.bottom-nav a.active {
+  color: #2563eb;
+  font-weight: 600;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Morador Mensagens</title>
+  <link rel="stylesheet" href="./css/morador-mensagens.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <header class="header">
+    <div>
+      <h1>CondoApp</h1>
+      <span class="role">Morador</span>
+    </div>
+    <button class="logout">⤴</button>
+  </header>
+
+  <main class="main-content">
+    <section class="card">
+      <h3>Mensagens</h3>
+      <p class="subtitle">Comunicação com a administração</p>
+
+      <div class="conversas">
+        <div class="conversa nova">
+          <div class="icon">🛡️</div>
+          <div class="conteudo">
+            <strong>Administração</strong>
+            <p class="mensagem">Problema no interfone resolvido</p>
+            <small>10 min atrás</small>
+          </div>
+          <span class="badge novo">Novo</span>
+        </div>
+
+        <div class="conversa nova">
+          <div class="icon">🛡️</div>
+          <div class="conteudo">
+            <strong>Administração</strong>
+            <p class="mensagem">Solicitação de reserva aprovada</p>
+            <small>1h atrás</small>
+          </div>
+          <span class="badge novo">Novo</span>
+        </div>
+
+        <div class="conversa">
+          <div class="icon">🛡️</div>
+          <div class="conteudo">
+            <strong>Administração</strong>
+            <p class="mensagem">O boleto foi enviado por email</p>
+            <small>2h atrás</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card ajuda">
+      <h4>Precisa de ajuda?</h4>
+      <p class="subtitle">Assuntos comuns</p>
+
+      <button class="btn-assunto">💬 Dúvida sobre boleto</button>
+      <button class="btn-assunto">💬 Fazer uma reserva</button>
+      <button class="btn-assunto">💬 Reportar problema</button>
+    </section>
+  </main>
+
+  <nav class="bottom-nav">
+    <a href="#" class="nav-item">🏠<span>Dashboard</span></a>
+    <a href="#" class="nav-item">💰<span>Finanças</span></a>
+    <a href="#" class="nav-item">📅<span>Reservas</span></a>
+    <a href="#" class="nav-item">📄<span>Documentos</span></a>
+    <a href="#" class="nav-item">👥<span>Visitantes</span></a>
+    <a href="#" class="nav-item active">💬<span>Mensagens</span></a>
+    <a href="#" class="nav-item">⚙️<span>Configurações</span></a>
+  </nav>
+</body>
+</html>

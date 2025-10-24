@@ -1,0 +1,131 @@
+/* ====== RESET ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f4f8ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ====== CONTAINER ====== */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+/* ====== CARD ====== */
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 30px 40px;
+  width: 340px;
+  text-align: center;
+}
+
+.card h2 {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.card p {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+/* ====== ICON ====== */
+.icon-circle {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  margin: 0 auto 10px;
+}
+
+.admin-icon {
+  background-color: #0a5cff;
+  color: white;
+}
+
+.resident-icon {
+  background-color: #444c56;
+  color: white;
+}
+
+/* ====== INPUTS ====== */
+label {
+  display: block;
+  text-align: left;
+  font-size: 0.85rem;
+  color: #222;
+  margin: 10px 0 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  background: #f3f3f6;
+  font-size: 0.9rem;
+}
+
+/* ====== FORGOT LINK ====== */
+.forgot {
+  display: block;
+  text-align: left;
+  color: #0066ff;
+  font-size: 0.85rem;
+  margin: 8px 0 15px;
+  text-decoration: none;
+}
+
+/* ====== BUTTONS ====== */
+.btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-admin {
+  background: #0a5cff;
+  color: #fff;
+}
+
+.btn-admin:hover {
+  background: #084ed4;
+}
+
+.btn-resident {
+  background: #353b43;
+  color: #fff;
+}
+
+.btn-resident:hover {
+  background: #22272e;
+}
+
+/* ====== DIVIDER ====== */
+.divider {
+  font-size: 0.9rem;
+  color: #666;
+}
