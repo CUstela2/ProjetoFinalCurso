@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Configurações | CondoApp</title>
+  <link rel="stylesheet" href="./css/admin-configuracoes.css" />
+</head>
+<body>
+  <header class="top-bar">
+    <div class="app-info">
+      <h1>CondoApp</h1>
+      <span>Administrador</span>
+    </div>
+    <div class="logout-icon">⎋</div>
+  </header>
+
+  <main>
+    <section class="section perfil">
+      <h2>Configurações</h2>
+      <p class="descricao">Gerencie suas preferências e perfil</p>
+
+      <div class="card">
+        <h3>Perfil</h3>
+        <p class="sub">Informações pessoais</p>
+
+        <div class="foto-container">
+          <div class="foto">JS</div>
+          <button class="btn-secundario">Alterar Foto</button>
+        </div>
+
+        <label>Nome Completo</label>
+        <div class="input">
+          <span class="icon">👤</span>
+          <input type="text" value="João Silva" disabled />
+        </div>
+
+        <label>Email</label>
+        <div class="input">
+          <span class="icon">📧</span>
+          <input type="email" value="joao.silva@email.com" disabled />
+        </div>
+
+        <label>Telefone</label>
+        <div class="input">
+          <span class="icon">📞</span>
+          <input type="tel" value="(11) 98765-4321" disabled />
+        </div>
+
+        <label>Apartamento</label>
+        <div class="input">
+          <span class="icon">🏠</span>
+          <input type="text" value="Apto 301 - Bloco A" disabled />
+        </div>
+
+        <button class="btn-primario">Salvar Alterações</button>
+      </div>
+
+      <div class="card">
+        <h3>Segurança</h3>
+        <p class="sub">Gerencie sua senha e segurança</p>
+
+        <button class="btn-secundario full">Alterar Senha</button>
+        <p class="info">Última alteração de senha: 15/09/2025</p>
+      </div>
+
+      <div class="card">
+        <h3>Notificações</h3>
+        <p class="sub">Configure suas preferências de notificação</p>
+
+        <div class="toggle-item">
+          <div class="toggle-text">
+            <span class="icon">📧</span>
+            <div>
+              <strong>Email</strong>
+              <p>Receber notificações por email</p>
+            </div>
+          </div>
+          <label class="switch">
+            <input type="checkbox" checked />
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="toggle-item">
+          <div class="toggle-text">
+            <span class="icon">🔔</span>
+            <div>
+              <strong>Push</strong>
+              <p>Notificações no celular</p>
+            </div>
+          </div>
+          <label class="switch">
+            <input type="checkbox" checked />
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="sub-toggles">
+          <p>Tipos de notificação</p>
+          <label class="switch small">
+            <input type="checkbox" checked />
+            <span class="slider"></span>
+            <span class="label">Reservas</span>
+          </label>
+          <label class="switch small">
+            <input type="checkbox" checked />
+            <span class="slider"></span>
+            <span class="label">Manutenções</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="card sobre">
+        <h3>Sobre o App</h3>
+        <p><strong>Versão:</strong> 1.0.0</p>
+        <p><strong>Condomínio:</strong> Residencial Jardim</p>
+        <a href="#">Termos de Uso e Privacidade</a>
+      </div>
+    </section>
+  </main>
+
+  <nav class="bottom-nav">
+    <a href="#" class="nav-item">
+      <span>🏠</span>
+      <p>Dashboard</p>
+    </a>
+    <a href="#" class="nav-item">
+      <span>💰</span>
+      <p>Finanças</p>
+    </a>
+    <a href="#" class="nav-item">
+      <span>📅</span>
+      <p>Reservas</p>
+    </a>
+    <a href="#" class="nav-item">
+      <span>📄</span>
+      <p>Documentos</p>
+    </a>
+    <a href="#" class="nav-item">
+      <span>🧰</span>
+      <p>Manutenção</p>
+    </a>
+    <a href="#" class="nav-item">
+      <span>💬</span>
+      <p>Mensagens</p>
+    </a>
+    <a href="#" class="nav-item active">
+      <span>⚙️</span>
+      <p>Configurações</p>
+    </a>
+  </nav>
+</body>
+</html>
