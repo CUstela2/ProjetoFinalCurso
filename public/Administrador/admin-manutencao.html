@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin - Manutenção</title>
+  <link rel="stylesheet" href="./css/admin-manutencao.css" />
+</head>
+<body>
+  <header class="header">
+    <div>
+      <h2>Domus</h2>
+      <p class="role">Administrador</p>
+    </div>
+    <button class="logout-btn">⤴</button>
+  </header>
+
+  <main class="main">
+    <section class="section-top">
+      <div class="section-header">
+        <h3>Manutenção</h3>
+        <p class="subtitle">Gerenciar manutenções de equipamentos</p>
+        <button class="add-btn">＋</button>
+      </div>
+
+      <div class="status-cards">
+        <div class="status-card">
+          <span class="icon">🕒</span>
+          <p class="number">2</p>
+          <p class="label">Pendentes</p>
+        </div>
+        <div class="status-card">
+          <span class="icon">🔧</span>
+          <p class="number">2</p>
+          <p class="label">Em Andamento</p>
+        </div>
+        <div class="status-card">
+          <span class="icon">⚠️</span>
+          <p class="number">1</p>
+          <p class="label">Urgentes</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="manutencoes-ativas">
+      <h4>Manutenções Ativas</h4>
+      <p class="subtitle">Pendentes e em andamento</p>
+
+      <div class="manutencao-card">
+        <div class="manutencao-info">
+          <h5>Elevador 1</h5>
+          <p>Barulho estranho ao descer</p>
+          <p class="details">Registrado em 10/10/2025<br>Técnico: A confirmar</p>
+        </div>
+        <div class="tags">
+          <span class="tag urgente">Alta</span>
+          <span class="tag pendente">Pendente</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="manutencoes-concluidas">
+      <h4>Manutenções Concluídas</h4>
+      <p class="subtitle">Histórico recente</p>
+
+      <div class="manutencao-card concluida">
+        <div class="manutencao-info">
+          <h5>Elevador 2</h5>
+          <p>Manutenção preventiva</p>
+          <p class="details">
+            Concluído em 12/10/2025<br>
+            Técnico: Empresa Elevadores XYZ
+          </p>
+        </div>
+        <span class="check">✔️</span>
+      </div>
+    </section>
+  </main>
+
+  <nav class="bottom-nav">
+    <a href="#">🏠 Dashboard</a>
+    <a href="#">💰 Finanças</a>
+    <a href="#">📅 Reservas</a>
+    <a href="#">📄 Documentos</a>
+    <a href="#" class="active">🛠️ Manutenção</a>
+    <a href="#">💬 Mensagens</a>
+    <a href="#">⚙️ Configurações</a>
+  </nav>
+
+  <!-- ✅ MODAL DE NOVA MANUTENÇÃO -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <h3 id="modal-titulo">Nova Manutenção</h3>
+      <label for="equipamento">Equipamento</label>
+      <input type="text" id="equipamento" placeholder="Ex: Portão Principal" />
+
+      <label for="descricao">Descrição</label>
+      <textarea id="descricao" rows="3" placeholder="Descreva o problema..."></textarea>
+
+      <label for="gravidade">Gravidade</label>
+      <select id="gravidade">
+        <option value="">Selecione...</option>
+        <option value="baixa">Baixa</option>
+        <option value="media">Média</option>
+        <option value="alta">Alta</option>
+      </select>
+
+      <div class="modal-actions">
+        <button class="btn cancel">Cancelar</button>
+        <button class="btn save">Salvar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ✅ MODAL DE CONFIRMAÇÃO DE EXCLUSÃO -->
+  <div class="confirm-modal" id="confirm-modal">
+    <div class="confirm-content">
+      <p>Deseja realmente excluir esta manutenção?</p>
+      <div class="modal-actions">
+        <button class="btn cancel">Cancelar</button>
+        <button class="btn delete-confirm">Excluir</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/admin-manutencao.js"></script>
+</body>
+</html>

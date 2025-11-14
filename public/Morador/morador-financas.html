@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finanças - Morador</title>
+  <link rel="stylesheet" href="./css/morador-financas.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <header class="header">
+    <div>
+      <h1>CondoApp</h1>
+      <span class="role">Morador</span>
+    </div>
+    <button class="logout">⤴</button>
+  </header>
+
+  <main class="main-content">
+    <section class="user-info">
+      <h2>Minhas Finanças</h2>
+      <p class="apto">Apto 301 - Bloco A</p>
+    </section>
+
+    <!-- Resumo financeiro -->
+    <section class="summary">
+      <div class="summary-card orange">
+        <span class="icon">📄</span>
+        <div>
+          <h3>R$ 792,30</h3>
+          <p>Total Pendente</p>
+        </div>
+      </div>
+
+      <div class="summary-card green">
+        <span class="icon">💳</span>
+        <div>
+          <h3>R$ 150,40</h3>
+          <p>Pago este Mês</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contas do mês -->
+    <section class="card">
+      <h3>Contas do Mês</h3>
+      <p class="subtitle">Outubro 2025</p>
+
+      <div class="bill">
+        <div class="bill-info">
+          <span class="icon blue">💧</span>
+          <div>
+            <p>Água</p>
+            <small>Venc: 05/10/2025</small>
+          </div>
+        </div>
+        <div class="bill-value">
+          <p>R$ 85,40</p>
+          <span class="status pago">Pago</span>
+        </div>
+      </div>
+
+      <div class="bill">
+        <div class="bill-info">
+          <span class="icon yellow">⚡</span>
+          <div>
+            <p>Luz</p>
+            <small>Venc: 15/10/2025</small>
+          </div>
+        </div>
+        <div class="bill-value">
+          <p>R$ 142,30</p>
+          <span class="status pendente">Pendente</span>
+        </div>
+      </div>
+
+      <div class="bill">
+        <div class="bill-info">
+          <span class="icon red">🔥</span>
+          <div>
+            <p>Gás</p>
+            <small>Venc: 08/10/2025</small>
+          </div>
+        </div>
+        <div class="bill-value">
+          <p>R$ 65,00</p>
+          <span class="status pago">Pago</span>
+        </div>
+      </div>
+
+      <div class="bill">
+        <div class="bill-info">
+          <span class="icon gray">🏠</span>
+          <div>
+            <p>Condomínio</p>
+            <small>Venc: 10/10/2025</small>
+          </div>
+        </div>
+        <div class="bill-value">
+          <p>R$ 650,00</p>
+          <span class="status pendente">Pendente</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Histórico de Gastos -->
+    <section class="card">
+      <h3>Histórico de Gastos</h3>
+      <p class="subtitle">Últimos 5 meses</p>
+      <canvas id="gastosChart" height="200"></canvas>
+    </section>
+
+    <!-- Pagamentos anteriores -->
+    <section class="card">
+      <h3>Pagamentos Anteriores</h3>
+      <p class="subtitle">Histórico de pagamentos realizados</p>
+
+      <div class="bill">
+        <div class="bill-info">
+          <p>Condomínio - Set/2025</p>
+          <small>05/09/2025</small>
+        </div>
+        <div class="bill-value">
+          <p>R$ 650,00</p>
+          <span class="status pago">Pago</span>
+        </div>
+      </div>
+
+      <div class="bill">
+        <div class="bill-info">
+          <p>Luz - Set/2025</p>
+          <small>12/09/2025</small>
+        </div>
+        <div class="bill-value">
+          <p>R$ 138,20</p>
+          <span class="status pago">Pago</span>
+        </div>
+      </div>
+
+      <div class="bill">
+        <div class="bill-info">
+          <p>Água - Set/2025</p>
+          <small>08/09/2025</small>
+        </div>
+        <div class="bill-value">
+          <p>R$ 88,15</p>
+          <span class="status pago">Pago</span>
+        </div>
+      </div>
+
+      <div class="bill">
+        <div class="bill-info">
+          <p>Gás - Set/2025</p>
+          <small>10/09/2025</small>
+        </div>
+        <div class="bill-value">
+          <p>R$ 65,00</p>
+          <span class="status pago">Pago</span>
+        </div>
+      </div>
+    </section>
+
+    <button class="btn-pagar">💳 Pagar Contas Pendentes</button>
+  </main>
+
+  <!-- Navegação inferior -->
+  <nav class="bottom-nav">
+    <a href="#">🏠<span>Dashboard</span></a>
+    <a href="#" class="active">💲<span>Finanças</span></a>
+    <a href="#">📅<span>Reservas</span></a>
+    <a href="#">📄<span>Documentos</span></a>
+    <a href="#">👥<span>Visitantes</span></a>
+    <a href="#">💬<span>Mensagens</span></a>
+    <a href="#">⚙️<span>Configurações</span></a>
+  </nav>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+  const moradorId = 1;  // Exemplo, você deve pegar isso do login ou de onde for armazenado
+  const apiUrlContas = `http://localhost:3000/financas/${moradorId}`;
+  const apiUrlPagamentos = `http://localhost:3000/pagamentos/${moradorId}`;
+  
+  // Carregar as contas pendentes
+  fetch(apiUrlContas)
+    .then(response => response.json())
+    .then(contas => {
+      contas.forEach(conta => {
+        if (conta.status === 'Pendente') {
+          const billDiv = document.createElement('div');
+          billDiv.classList.add('bill');
+          
+          billDiv.innerHTML = `
+            <div class="bill-info">
+              <span class="icon ${getIconClass(conta.tipo_conta)}">${getIcon(conta.tipo_conta)}</span>
+              <div>
+                <p>${conta.nome_conta}</p>
+                <small>Venc: ${conta.vencimento}</small>
+              </div>
+            </div>
+            <div class="bill-value">
+              <p>R$ ${conta.valor.toFixed(2)}</p>
+              <span class="status ${conta.status === 'Pago' ? 'pago' : 'pendente'}">${conta.status}</span>
+              <button class="btn-pagar" data-conta-id="${conta.id}" data-valor="${conta.valor}">Pagar</button>
+            </div>
+          `;
+          
+          document.querySelector('.card').appendChild(billDiv);
+        }
+      });
+    })
+    .catch(err => console.error('Erro ao carregar as contas:', err));
+
+  // Carregar os pagamentos anteriores
+  fetch(apiUrlPagamentos)
+    .then(response => response.json())
+    .then(pagamentos => {
+      pagamentos.forEach(pagamento => {
+        const paymentDiv = document.createElement('div');
+        paymentDiv.classList.add('bill');
+        
+        paymentDiv.innerHTML = `
+          <div class="bill-info">
+            <p>${pagamento.nome_conta} - ${pagamento.data_pagamento}</p>
+            <small>${pagamento.data_pagamento}</small>
+          </div>
+          <div class="bill-value">
+            <p>R$ ${pagamento.valor_pago.toFixed(2)}</p>
+            <span class="status pago">Pago</span>
+          </div>
+        `;
+        
+        document.querySelector('.card').appendChild(paymentDiv);
+      });
+    })
+    .catch(err => console.error('Erro ao carregar pagamentos:', err));
+
+  // Função para gerar o ícone da conta
+  function getIconClass(tipo) {
+    if (tipo === 'Água') return 'blue';
+    if (tipo === 'Luz') return 'yellow';
+    if (tipo === 'Gás') return 'red';
+    return 'gray';
+  }
+
+  function getIcon(tipo) {
+    if (tipo === 'Água') return '💧';
+    if (tipo === 'Luz') return '⚡';
+    if (tipo === 'Gás') return '🔥';
+    return '🏠';
+  }
+
+  // Lógica para o botão de pagamento (exemplo)
+  document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('btn-pagar')) {
+      const contaId = e.target.getAttribute('data-conta-id');
+      const valorPago = parseFloat(e.target.getAttribute('data-valor'));
+      
+      // Exibir chave PIX
+      showPixModal(contaId, valorPago);
+    }
+  });
+
+  // Função para exibir o modal com a chave PIX
+  function showPixModal(contaId, valorPago) {
+    const modal = document.createElement('div');
+    modal.classList.add('pix-modal');
+    modal.innerHTML = `
+      <div class="modal-content">
+        <h2>Pagamento via PIX</h2>
+        <p>Chave PIX: <strong>1234567890@pix.com</strong></p>
+        <p><strong>Valor a ser pago:</strong> R$ ${valorPago.toFixed(2)}</p>
+        <button class="btn-confirmar-pagamento" data-conta-id="${contaId}" data-valor="${valorPago}">Confirmar Pagamento</button>
+        <button class="btn-cancelar">Cancelar</button>
+      </div>
+    `;
+    
+    document.body.appendChild(modal);
+    
+    // Evento para cancelar o pagamento
+    modal.querySelector('.btn-cancelar').addEventListener('click', () => {
+      modal.remove();
+    });
+
+    // Evento para confirmar o pagamento
+    modal.querySelector('.btn-confirmar-pagamento').addEventListener('click', () => {
+      confirmPayment(contaId, valorPago);
+      modal.remove();
+    });
+  }
+
+  // Função para confirmar o pagamento
+  function confirmPayment(contaId, valorPago) {
+    const moradorId = 1;  // Exemplo, você deve pegar isso do login ou de onde for armazenado
+    const dataPagamento = new Date().toISOString().split('T')[0];  // Data atual no formato YYYY-MM-DD
+    
+    // Atualizar o status da conta para "Pago"
+    fetch('http://localhost:3000/pagamento', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        moradorId: moradorId,
+        contaId: contaId,
+        valorPago: valorPago,
+        dataPagamento: dataPagamento,
+      })
+    })
+    .then(response => response.json())
+    .then(data => {
+      alert(data.message);
+      location.reload();  // Recarregar para mostrar as contas atualizadas
+    })
+    .catch(err => console.error('Erro ao registrar pagamento:', err));
+  }
+});
+
+  </script>
+
+</body>
+</html>

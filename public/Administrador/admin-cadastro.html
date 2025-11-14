@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Administrador</title>
+  <link rel="stylesheet" href="./css/admin-cadastro.css">
+</head>
+<body>
+  <div class="container">
+    <div class="form-box">
+      <div class="header">
+        <a href="#" class="back">&#8592;</a>
+        <div class="icon">⚙️</div>
+        <h2>Domus Imobiliária</h2>
+        <p>Cadastro de Administrador</p>
+        <small>Preencha os dados para criar sua conta</small>
+      </div>
+
+      <form action="/cadastro" method="POST">
+        <label>Nome Completo *</label>
+        <input type="text" name="nome" required placeholder="Digite seu nome completo">
+
+        <label>Email *</label>
+        <input type="email" name="email" required placeholder="seu@email.com">
+
+        <label>CPF *</label>
+        <input type="text" name="cpf" required placeholder="000.000.000-00">
+
+        <label>Código da Imobiliária *</label>
+        <input type="text" name="codigo" required placeholder="Digite o código fornecido">
+
+        <label>Senha *</label>
+        <input type="password" name="senha" required placeholder="Mínimo 6 caracteres">
+
+        <label>Confirmar Senha *</label>
+        <input type="password" name="confirmarSenha" required placeholder="Digite a senha novamente">
+
+        <button type="submit">Cadastrar Administrador</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

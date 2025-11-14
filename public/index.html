@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login Condomínio</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
   <div class="container">
     <!-- Acesso Administrador -->
@@ -17,14 +19,14 @@
       <p>Entre com suas credenciais de administrador</p>
 
       <label>Email</label>
-      <input type="email" placeholder="admin@condominio.com" />
+      <input type="email" id="admin-email" placeholder="admin@condominio.com" />
 
       <label>Senha</label>
-      <input type="password" placeholder="••••••••" />
+      <input type="password" id="admin-password" placeholder="••••••••" />
 
       <a href="#" class="forgot">Esqueceu a senha?</a>
 
-      <button class="btn btn-admin">Entrar como Administrador</button>
+      <button class="btn btn-admin" onclick="login('admin')">Entrar como Administrador</button>
     </div>
 
     <div class="divider">ou</div>
@@ -38,15 +40,17 @@
       <p>Entre com suas credenciais de morador</p>
 
       <label>Email</label>
-      <input type="email" placeholder="morador@email.com" />
+      <input type="email" id="resident-email" placeholder="morador@email.com" />
 
       <label>Senha</label>
-      <input type="password" placeholder="••••••••" />
+      <input type="password" id="resident-password" placeholder="••••••••" />
 
       <a href="#" class="forgot">Esqueceu a senha?</a>
 
-      <button class="btn btn-resident">Entrar como Morador</button>
+      <button class="btn btn-resident" onclick="login('resident')">Entrar como Morador</button>
     </div>
   </div>
+  <script src="js/script.js"></script>
 </body>
+
 </html>

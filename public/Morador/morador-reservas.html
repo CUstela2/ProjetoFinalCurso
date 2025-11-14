@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reservas - Morador</title>
+  <link rel="stylesheet" href="./css/morador-reservas.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div>
+      <h1>CondoApp</h1>
+      <span class="role">Morador</span>
+    </div>
+    <button class="logout" title="Sair">⤴</button>
+  </header>
+
+  <main class="main-content">
+    <section class="reservas-header">
+      <div>
+        <h2>Reservas</h2>
+        <p>Reserve áreas comuns do condomínio</p>
+      </div>
+      <button id="btn-add" class="btn-add" title="Nova reserva">+</button>
+    </section>
+
+    <section class="card" id="areas-available"></section>
+
+    <section class="card" id="my-reservations">
+      <h3>Minhas Reservas</h3>
+      <p class="subtitle">Reservas agendadas</p>
+      <div id="reservations-list"></div>
+    </section>
+  </main>
+
+  <nav class="bottom-nav">
+    <a href="#">🏠<span>Dashboard</span></a>
+    <a href="#">💲<span>Finanças</span></a>
+    <a href="#" class="active">📅<span>Reservas</span></a>
+    <a href="#">📄<span>Documentos</span></a>
+    <a href="#">👥<span>Visitantes</span></a>
+    <a href="#">💬<span>Mensagens</span></a>
+    <a href="#">⚙️<span>Configurações</span></a>
+  </nav>
+
+  <div id="reserve-modal" class="modal hidden" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close">✕</button>
+      <h3 id="modal-title">Nova Reserva</h3>
+
+      <form id="reserve-form">
+        <input type="hidden" id="area-id" />
+
+        <label>Área
+          <div id="modal-area-name" class="field-plain"></div>
+        </label>
+
+        <label>Data
+          <input id="reserve-date" type="date" required />
+        </label>
+<label>Horário Inicial
+  <select id="reserve-start" required></select>
+</label>
+
+<label>Horário Final
+  <select id="reserve-end" required></select>
+</label>
+
+        <div class="modal-actions">
+          <button type="button" id="cancel-modal" class="btn-secondary">Cancelar</button>
+          <button type="submit" class="btn-primary">Reservar</button>
+        </div>
+
+        <p id="modal-help" class="help-text"></p>
+      </form>
+    </div>
+  </div>
+
+<script type="module" src="./js/morador-reservas.js"></script>
+</body>
+</html>

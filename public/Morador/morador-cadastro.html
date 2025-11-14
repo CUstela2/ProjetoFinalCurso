@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Morador</title>
+  <link rel="stylesheet" href="../Administrador/css/admin-cadastro.css">
+</head>
+<body>
+  <div class="container">
+    <div class="form-box">
+      <div class="header">
+        <a href="index.html" class="back">&#8592;</a>
+        <div class="icon">🏠</div>
+        <h2>Domus Condomínio</h2>
+        <p>Cadastro de Morador</p>
+        <small>Preencha os dados fornecidos pelo síndico</small>
+      </div>
+
+      <form action="../index.html" method="POST">
+        <label>Nome Completo *</label>
+        <input type="text" name="nome" required placeholder="Digite seu nome completo">
+
+        <label>Email *</label>
+        <input type="email" name="email" required placeholder="seu@email.com">
+
+        <label>CPF *</label>
+        <input type="text" name="cpf" required placeholder="000.000.000-00">
+
+        <label>Código do Condomínio *</label>
+        <input type="text" name="codigo" required placeholder="Digite o código fornecido pelo síndico">
+
+        <label>Senha *</label>
+        <input type="password" name="senha" required placeholder="Mínimo 6 caracteres">
+
+        <label>Confirmar Senha *</label>
+        <input type="password" name="confirmarSenha" required placeholder="Digite a senha novamente">
+
+        <button type="submit">Cadastrar Morador</button>
+      </form>
+    </div>
+  </div>
+  <script type="module" src="../js/server.js"></script>
+</body>
+</html>

@@ -1,0 +1,370 @@
+/* ==============================
+   DOMUS - ADMIN MANUTENÇÃO
+   ============================== */
+
+:root {
+  --primaria: #2563EB;      /* Azul médio */
+  --secundaria: #BFDBFE;    /* Azul claro */
+  --destaque: #C084FC;      /* Roxo claro */
+  --fundo: #FFFFFF;         /* Branco */
+  --texto: #374151;         /* Cinza escuro */
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: var(--fundo);
+  color: var(--texto);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ==============================
+   HEADER
+   ============================== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, var(--primaria), var(--destaque));
+  color: white;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 2px 6px var(--sombra);
+}
+
+.header h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.2rem;
+  letter-spacing: 1px;
+}
+
+.header .role {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.logout-btn {
+  background: var(--destaque);
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.6rem 0.9rem;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 5px var(--sombra);
+  transition: all 0.2s ease;
+}
+
+.logout-btn:hover {
+  background: var(--primaria);
+  transform: translateY(-2px);
+}
+
+/* ==============================
+   CONTEÚDO PRINCIPAL
+   ============================== */
+.main {
+  flex: 1;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ==============================
+   TOPO / STATUS
+   ============================== */
+.section-top {
+  background: linear-gradient(120deg, var(--secundaria), #ede9fe);
+  border-radius: 16px;
+  padding: 1rem 1.2rem;
+  box-shadow: 0 3px 8px var(--sombra);
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-header h3 {
+  font-size: 1.4rem;
+  color: var(--primaria);
+}
+
+.add-btn {
+  background: linear-gradient(90deg, var(--primaria), var(--destaque));
+  color: white;
+  border: none;
+  font-size: 1.6rem;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  box-shadow: 0 3px 8px var(--sombra);
+  transition: 0.2s ease;
+}
+
+.add-btn:hover {
+  transform: scale(1.1);
+}
+
+.status-cards {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.status-card {
+  flex: 1;
+  min-width: 120px;
+  background: white;
+  border-radius: 14px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 6px var(--sombra);
+}
+
+.status-card .number {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primaria);
+}
+
+/* ==============================
+   MANUTENÇÕES
+   ============================== */
+.manutencoes-ativas, .manutencoes-concluidas {
+  background: #f9fafb;
+  border-radius: 14px;
+  padding: 1.2rem;
+  box-shadow: 0 3px 8px var(--sombra);
+}
+
+.manutencao-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border-radius: 14px;
+  padding: 1rem;
+  margin-bottom: 0.8rem;
+  box-shadow: 0 3px 6px var(--sombra);
+  transition: transform 0.2s ease;
+}
+
+.manutencao-card:hover {
+  transform: translateY(-2px);
+}
+
+.tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+  color: white;
+}
+
+.tag.urgente { background: #ef4444; }
+.tag.pendente { background: #f59e0b; }
+.tag.andamento { background: #3b82f6; }
+.tag.baixa { background: #10b981; }
+.tag.media { background: #fbbf24; }
+.tag.alta { background: #ec4899; }
+
+.manutencao-card.concluida {
+  opacity: 0.9;
+  border-left: 5px solid var(--primaria);
+}
+
+/* ==============================
+   MODAL DE NOVA MANUTENÇÃO
+   ============================== */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 5px 20px var(--sombra);
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content h3 {
+  margin-bottom: 1rem;
+  color: var(--primaria);
+}
+
+.modal-content label {
+  display: block;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.modal-content input, 
+.modal-content textarea, 
+.modal-content select {
+  width: 100%;
+  margin-top: 0.3rem;
+  padding: 0.6rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.modal-content input:focus,
+.modal-content textarea:focus,
+.modal-content select:focus {
+  border-color: var(--destaque);
+  box-shadow: 0 0 0 2px rgba(167, 139, 250, 0.3);
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.btn {
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s ease;
+  box-shadow: 0 3px 8px var(--sombra);
+}
+
+.btn.cancel {
+  background: #e5e7eb;
+  color: var(--texto);
+}
+
+.btn.save {
+  background: linear-gradient(90deg, var(--primaria), var(--destaque));
+  color: white;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* ==============================
+   ANIMAÇÃO E NAVEGAÇÃO
+   ============================== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  background: linear-gradient(90deg, var(--primaria), var(--destaque));
+  color: white;
+  padding: 0.8rem 0;
+  position: sticky;
+  bottom: 0;
+  box-shadow: 0 -3px 8px var(--sombra);
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+}
+
+.bottom-nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  opacity: 0.9;
+  transition: 0.2s;
+}
+
+.bottom-nav a.active {
+  font-weight: 600;
+  opacity: 1;
+  border-bottom: 2px solid white;
+}
+
+
+.actions {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.btn-action {
+  background: #e0e7ff;
+  border: none;
+  padding: 0.4rem 0.6rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 2px 5px var(--sombra);
+  transition: 0.2s ease;
+}
+
+.btn-action.edit {
+  background: #c084fc;
+  color: white;
+}
+
+.btn-action.delete {
+  background: #ef4444;
+  color: white;
+}
+
+.btn-action:hover {
+  transform: scale(1.1);
+}
+
+
+.confirm-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+
+.confirm-content {
+  background: white;
+  border-radius: 18px;
+  padding: 1.5rem;
+  width: 90%;
+  max-width: 380px;
+  text-align: center;
+  box-shadow: 0 5px 20px var(--sombra);
+  animation: fadeIn 0.3s ease;
+}
+
+.confirm-content p {
+  font-size: 1rem;
+  color: var(--texto);
+  margin-bottom: 1rem;
+}
+
+.confirm-content .btn.delete-confirm {
+  background: #ef4444;
+  color: white;
+}
